@@ -1,19 +1,19 @@
-# The Science of Training — Workshop
+# The Science of Training: Predicting How Models Learn
 
-Static site for the "Science of Training" workshop. Hosted via GitHub Pages.
+Website for the NeurIPS 2026 workshop. Hosted at https://science-of-training.github.io/.
 
 ## Structure
-- `index.html` — main landing page (about, CFP, schedule, speakers, organizers)
-- `papers.html` — accepted papers
+- `index.html` — main landing page (about, goals, CFP, schedule, speakers, organizers)
+- `papers.html` — accepted papers (populated after notifications)
 - `committee.html` — program committee
 - `assets/styles.css` — site styles
-- `materials/` — workshop materials (slides, posters) once available
+- `materials/` — internal materials (gitignored, never published)
 
 ## Local preview
 ```sh
-python3 -m http.server 8000
+python3 -m http.server 8000 --directory .
 # then open http://localhost:8000
 ```
 
 ## Deploy
-Pushed to GitHub and served from the `main` branch via GitHub Pages.
+Pushes to `main` are served automatically via GitHub Pages.

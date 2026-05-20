@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Science of Training — Workshop</title>
-  <meta name="description" content="A workshop on the science of training large-scale machine learning models: scaling laws, optimization, data, and emergent behavior." />
+  <title>The Science of Training: Predicting How Models Learn — NeurIPS 2026 Workshop</title>
+  <meta name="description" content="A NeurIPS 2026 workshop on the science of training: describing trajectories, predicting outcomes, and steering training of large-scale ML models." />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
   <header class="hero">
     <nav class="nav">
-      <a class="brand" href="index.html">Science of Training</a>
+      <a class="brand" href="index.html">Science of Training <span class="brand-sub">· NeurIPS 2026</span></a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
+        <li><a href="#goals">Goals &amp; Topics</a></li>
         <li><a href="#cfp">Call for Papers</a></li>
         <li><a href="#schedule">Schedule</a></li>
         <li><a href="#speakers">Speakers</a></li>
@@ -23,12 +24,12 @@
     </nav>
 
     <div class="hero-inner">
-      <p class="eyebrow">Workshop</p>
-      <h1>The Science of Training</h1>
-      <p class="tagline">Understanding how, why, and when large models learn.</p>
+      <p class="eyebrow">NeurIPS 2026 Workshop</p>
+      <h1>The Science of Training:<br />Predicting How Models Learn</h1>
+      <p class="tagline">Toward actionable training dynamics — describing trajectories, predicting outcomes, and steering training.</p>
       <p class="meta">
-        <span>📍 Venue TBA</span>
-        <span>🗓 Date TBA</span>
+        <span>📍 NeurIPS 2026 (venue TBA)</span>
+        <span>🗓 December 2026</span>
       </p>
     </div>
   </header>
@@ -37,99 +38,170 @@
     <section id="about" class="section">
       <h2>About the Workshop</h2>
       <p>
-        Modern machine learning has been driven by training ever-larger models on
-        ever-larger datasets, yet our scientific understanding of training itself
-        lags behind. This workshop brings together researchers studying the
-        <em>science</em> of training: the principles, laws, and phenomena that
-        govern how models learn at scale.
+        Although modern models are extensively evaluated after training, far less work has focused on
+        characterizing how individual training runs unfold. Aggregate predictions such as scaling laws
+        and architecture-based estimators have produced valuable high-level insights, and recent studies
+        of training dynamics shed light on how patterns emerge — yet these analyses are typically
+        descriptive or post-hoc, and do not capture the dynamics of individual trajectories.
       </p>
       <p>
-        We invite work spanning empirical phenomena, theoretical frameworks, and
-        methodological contributions that advance our understanding of training
-        dynamics — from small models to frontier-scale systems.
+        Understanding training at the trajectory level reveals signals that final-accuracy
+        evaluations miss: models can score well on downstream evaluations while becoming overtrained
+        and hard to finetune; training dynamics can predict whether subsequent adaptation will succeed,
+        degrade, or induce forgetting. To bridge understanding and practice, methods should move
+        beyond description toward diagnosing dynamic failures and guiding interventions during training.
       </p>
-
-      <h3>Topics of interest</h3>
-      <ul class="topics">
-        <li>Scaling laws and predictability</li>
-        <li>Optimization dynamics and loss landscapes</li>
-        <li>Data curation, mixing, and curriculum</li>
-        <li>Emergent capabilities and phase transitions</li>
-        <li>Mechanistic interpretability of training</li>
-        <li>Pretraining vs. post-training trade-offs</li>
-        <li>Compute-optimal training and efficiency</li>
-        <li>Reproducibility and training instabilities</li>
-      </ul>
+      <p>
+        <strong>Prediction is the critical bridge between insight and action.</strong> To act on training,
+        we must anticipate how models will evolve with data, scale, and optimization. This workshop
+        aims to move from descriptive to predictive understanding — and to lay the groundwork for
+        translating that understanding into prescriptive interventions.
+      </p>
     </section>
 
-    <section id="cfp" class="section alt">
+    <section id="goals" class="section alt">
+      <h2>Three Escalating Goals</h2>
+      <p class="muted">We welcome contributions across all three.</p>
+
+      <div class="goals-grid">
+        <article class="goal">
+          <p class="goal-tag">1 · Descriptive</p>
+          <h3>Characterizing how training unfolds</h3>
+          <ul>
+            <li>Representation formation, phase transitions, reorganization, and interaction across training</li>
+            <li>Interpretability across time, scale, gradients, and optimizer dynamics</li>
+            <li>Random variations and initial conditions</li>
+          </ul>
+        </article>
+        <article class="goal">
+          <p class="goal-tag">2 · Predictive</p>
+          <h3>Forecasting from early signals</h3>
+          <ul>
+            <li>Early monitoring of training failures and criteria for stopping</li>
+            <li>Stress-testing of early checkpoints; misrepresentations that lead to downstream malformation</li>
+            <li>Pretraining evaluations and invariants predicting post-training behavior across scale</li>
+            <li>Generalization prediction: what transfers from which data, when, and why</li>
+            <li>Training outcome prediction, including negative results</li>
+          </ul>
+        </article>
+        <article class="goal">
+          <p class="goal-tag">3 · Prescriptive</p>
+          <h3>Steering and repairing training</h3>
+          <ul>
+            <li>Training repair: reverting to and correcting from earlier checkpoints</li>
+            <li>Causal and interventional methods for training</li>
+            <li>Phase-specific data selection strategies</li>
+            <li>Controlling model behavior during training</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="cfp" class="section">
       <h2>Call for Papers</h2>
       <p>
-        We welcome submissions of original work, position papers, and
-        experience reports. Papers should be up to 8 pages (excluding references
-        and appendix) in the workshop template.
+        We invite submissions of original work, position papers, and experience reports that advance
+        trajectory-level understanding of training dynamics. Negative results and replication studies
+        are explicitly welcome. Submission portal and template details will be posted here.
       </p>
       <div class="dates-grid">
         <div class="date-card">
-          <p class="date-label">Submission deadline</p>
-          <p class="date-value">TBA</p>
+          <p class="date-label">Abstract submission</p>
+          <p class="date-value">Aug 22, 2026</p>
+        </div>
+        <div class="date-card">
+          <p class="date-label">Paper submission</p>
+          <p class="date-value">Aug 29, 2026</p>
+        </div>
+        <div class="date-card">
+          <p class="date-label">Reviewer bidding &amp; assignment</p>
+          <p class="date-value">Aug 30 – Sep 2, 2026</p>
+        </div>
+        <div class="date-card">
+          <p class="date-label">Reviewer deadline</p>
+          <p class="date-value">Sep 18, 2026</p>
         </div>
         <div class="date-card">
           <p class="date-label">Notification</p>
-          <p class="date-value">TBA</p>
+          <p class="date-value">Sep 29, 2026</p>
         </div>
         <div class="date-card">
           <p class="date-label">Camera-ready</p>
-          <p class="date-value">TBA</p>
+          <p class="date-value">Oct 20, 2026</p>
+        </div>
+        <div class="date-card">
+          <p class="date-label">Final program due</p>
+          <p class="date-value">Oct 27, 2026</p>
         </div>
         <div class="date-card">
           <p class="date-label">Workshop</p>
-          <p class="date-value">TBA</p>
+          <p class="date-value">NeurIPS 2026</p>
         </div>
       </div>
       <p class="cta-row">
-        <a class="button" href="#">Submit via OpenReview (link TBA)</a>
+        <a class="button" href="#">Submission portal (link TBA)</a>
       </p>
     </section>
 
-    <section id="schedule" class="section">
-      <h2>Schedule</h2>
-      <p class="muted">Tentative — subject to change.</p>
+    <section id="schedule" class="section alt">
+      <h2>Tentative Schedule</h2>
+      <p class="muted">A full day of invited talks, contributed orals, two poster sessions, and a moderated panel. Subject to change.</p>
       <table class="schedule">
         <tbody>
-          <tr><td class="time">09:00</td><td>Opening remarks</td></tr>
-          <tr><td class="time">09:15</td><td>Invited talk 1</td></tr>
-          <tr><td class="time">10:00</td><td>Contributed talks</td></tr>
-          <tr><td class="time">10:45</td><td>Coffee break</td></tr>
-          <tr><td class="time">11:15</td><td>Invited talk 2</td></tr>
-          <tr><td class="time">12:00</td><td>Poster session &amp; lunch</td></tr>
-          <tr><td class="time">14:00</td><td>Invited talk 3</td></tr>
-          <tr><td class="time">14:45</td><td>Contributed talks</td></tr>
-          <tr><td class="time">15:30</td><td>Coffee break</td></tr>
-          <tr><td class="time">16:00</td><td>Panel discussion</td></tr>
-          <tr><td class="time">17:00</td><td>Closing remarks</td></tr>
+          <tr><td class="time">09:00 – 09:10</td><td>Opening remarks</td></tr>
+          <tr><td class="time">09:10 – 09:50</td><td>Invited talk 1</td></tr>
+          <tr><td class="time">09:50 – 10:30</td><td>Invited talk 2</td></tr>
+          <tr><td class="time">10:30 – 11:15</td><td>Poster session 1</td></tr>
+          <tr><td class="time">11:15 – 11:55</td><td>Invited talk 3</td></tr>
+          <tr><td class="time">11:55 – 12:45</td><td>Contributed orals</td></tr>
+          <tr><td class="time">12:45 – 13:30</td><td>Lunch</td></tr>
+          <tr><td class="time">13:30 – 14:10</td><td>Invited talk 4</td></tr>
+          <tr><td class="time">14:10 – 14:50</td><td>Invited talk 5</td></tr>
+          <tr><td class="time">14:50 – 15:40</td><td>Contributed orals</td></tr>
+          <tr><td class="time">15:40 – 16:25</td><td>Poster session 2</td></tr>
+          <tr><td class="time">16:25 – 17:05</td><td>Panel discussion</td></tr>
+          <tr><td class="time">17:05 – 17:15</td><td>Closing remarks</td></tr>
         </tbody>
       </table>
     </section>
 
-    <section id="speakers" class="section alt">
+    <section id="speakers" class="section">
       <h2>Invited Speakers</h2>
       <div class="speakers-grid">
-        <div class="speaker"><p class="name">TBA</p><p class="affil">Affiliation</p></div>
-        <div class="speaker"><p class="name">TBA</p><p class="affil">Affiliation</p></div>
-        <div class="speaker"><p class="name">TBA</p><p class="affil">Affiliation</p></div>
-        <div class="speaker"><p class="name">TBA</p><p class="affil">Affiliation</p></div>
+        <div class="speaker">
+          <p class="name">Naomi Saphra</p>
+          <p class="affil">Kempner Institute, Harvard · incoming faculty, Boston University 2026</p>
+          <p class="status confirmed">Confirmed</p>
+        </div>
       </div>
+      <p class="muted" style="margin-top:18px;">Additional speakers will be announced as invitations are confirmed.</p>
     </section>
 
-    <section id="organizers" class="section">
+    <section id="organizers" class="section alt">
       <h2>Organizers</h2>
       <div class="speakers-grid">
-        <div class="speaker"><p class="name">TBA</p><p class="affil">Affiliation</p></div>
-        <div class="speaker"><p class="name">TBA</p><p class="affil">Affiliation</p></div>
-        <div class="speaker"><p class="name">TBA</p><p class="affil">Affiliation</p></div>
+        <div class="speaker">
+          <p class="name">Isabelle Lee</p>
+          <p class="affil">University of Southern California</p>
+        </div>
+        <div class="speaker">
+          <p class="name">Emmy Liu</p>
+          <p class="affil">Carnegie Mellon University, LTI</p>
+        </div>
+        <div class="speaker">
+          <p class="name">Kaiser Sun</p>
+          <p class="affil">Johns Hopkins University</p>
+        </div>
+        <div class="speaker">
+          <p class="name">Stella Biderman</p>
+          <p class="affil">EleutherAI</p>
+        </div>
+        <div class="speaker">
+          <p class="name">David Alvarez-Melis</p>
+          <p class="affil">Harvard University</p>
+        </div>
       </div>
-      <p class="muted">Contact: <a href="mailto:organizers@example.com">organizers@example.com</a></p>
+      <p class="muted" style="margin-top:18px;">Contact: <a href="mailto:lee.isabelle.g@gmail.com">lee.isabelle.g@gmail.com</a></p>
     </section>
   </main>
 

@@ -53,6 +53,11 @@ a:hover { text-decoration: underline; }
   letter-spacing: 0.01em;
   color: var(--fg);
 }
+.brand-sub {
+  color: var(--fg-muted);
+  font-weight: 400;
+  margin-left: 4px;
+}
 .nav-links {
   list-style: none;
   display: flex;
@@ -144,6 +149,54 @@ main { padding-bottom: 80px; }
 }
 .topics li { margin: 4px 0; }
 @media (max-width: 600px) { .topics { columns: 1; } }
+
+/* Goals grid */
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+.goal {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px;
+}
+.goal-tag {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  color: var(--accent-2);
+  margin: 0 0 6px;
+}
+.goal h3 {
+  margin: 0 0 12px;
+  font-size: 1.05rem;
+  color: var(--fg);
+}
+.goal ul {
+  padding-left: 18px;
+  margin: 0;
+  color: var(--fg-muted);
+  font-size: 0.95rem;
+}
+.goal ul li { margin: 6px 0; }
+
+.status {
+  display: inline-block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-top: 8px;
+}
+.status.confirmed {
+  background: rgba(122, 162, 247, 0.15);
+  color: var(--accent);
+  border: 1px solid rgba(122, 162, 247, 0.35);
+}
 
 /* Dates */
 .dates-grid {
