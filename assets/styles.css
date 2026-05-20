@@ -163,17 +163,20 @@ main { padding-bottom: 80px; }
   border-radius: 12px;
   padding: 22px;
 }
-.goal-tag {
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.75rem;
-  color: var(--accent-2);
-  margin: 0 0 6px;
-}
-.goal h3 {
-  margin: 0 0 12px;
-  font-size: 1.05rem;
+.goal-title {
+  margin: 0 0 4px;
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
   color: var(--fg);
+}
+.goal-num {
+  color: var(--accent-2);
+  margin-right: 6px;
+}
+.goal-sub {
+  margin: 0 0 14px;
+  color: var(--fg-muted);
+  font-size: 0.95rem;
 }
 .goal ul {
   padding-left: 18px;
