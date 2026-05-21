@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-label="The Science of Training workshop logo, dark variant">
+  <title>The Science of Training</title>
+  <desc>Dark-mode color variant of the workshop logo on transparent background.</desc>
+  <circle cx="160" cy="160" r="130" fill="none" stroke="#7aa7ff" stroke-width="2"/>
+  <circle cx="160" cy="160" r="120" fill="none" stroke="#7aa7ff" stroke-width="0.5" opacity="0.25"/>
+  <path d="M 65 215 Q 105 200 140 178" fill="none" stroke="#7aa7ff" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 140 178 Q 185 200 235 240" fill="none" stroke="#9aa0a6" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="4 4" opacity="0.7"/>
+  <path d="M 140 178 Q 192 124 256 89" fill="none" stroke="#34d399" stroke-width="3.5" stroke-linecap="round"/>
+  <g transform="translate(256 89) rotate(-28.6)">
+    <path d="M 0 0 L -14 -6 L -14 6 Z" fill="#34d399"/>
+  </g>
+  <circle cx="65" cy="215" r="5" fill="#7aa7ff"/>
+  <!-- Intervention dot: use semi-transparent dark fill so it works on any bg -->
+  <circle cx="140" cy="178" r="9" fill="none" stroke="#f87171" stroke-width="2"/>
+  <circle cx="140" cy="178" r="3.5" fill="#f87171"/>
+</svg>
