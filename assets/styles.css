@@ -199,9 +199,18 @@ a:hover { text-decoration: underline; }
 }
 @media (max-width: 600px) {
   .hero { padding-bottom: 48px; }
-  .hero-inner { padding: 32px 20px 0; }
-  .nav { padding: 16px 20px; }
-  .section { padding: 40px 20px; }
+  .hero-inner { padding: 24px 14px 0; }
+  .nav { padding: 14px 16px; }
+  .section { padding: 40px 16px; }
+
+  /* Compact nav: smaller text, tighter gap, drop the redundant subtitle */
+  .brand { font-size: 0.95rem; }
+  .brand-sub { display: none; }
+  .nav-links { gap: 10px 14px; }
+  .nav-links a { font-size: 0.82rem; }
+
+  /* Give the hero lockup a touch more room on small screens */
+  .hero-lockup { margin-bottom: 18px; }
 }
 .hero.compact .hero-inner { padding-top: 24px; }
 
