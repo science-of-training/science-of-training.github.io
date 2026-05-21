@@ -6,8 +6,17 @@
   <title>The Science of Training: Predicting How Models Learn — NeurIPS 2026 Workshop</title>
   <meta name="description" content="A NeurIPS 2026 workshop on the science of training: describing trajectories, predicting outcomes, and steering training of large-scale ML models." />
   <link rel="stylesheet" href="assets/styles.css" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
+  <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">☾</button>
   <header class="hero">
     <nav class="nav">
       <a class="brand" href="index.html">Science of Training <span class="brand-sub">· NeurIPS 2026</span></a>
@@ -254,5 +263,30 @@
     <p>© <span id="year"></span> The Science of Training Workshop. Site source on <a href="https://github.com/science-of-training/science-of-training.github.io">GitHub</a>.</p>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    (function () {
+      var btn = document.getElementById('theme-toggle');
+      if (!btn) return;
+      var mq = window.matchMedia('(prefers-color-scheme: dark)');
+      function current() {
+        var t = document.documentElement.getAttribute('data-theme');
+        if (t === 'light' || t === 'dark') return t;
+        return mq.matches ? 'dark' : 'light';
+      }
+      function render() {
+        var c = current();
+        btn.textContent = c === 'dark' ? '☀' : '☾';
+        btn.setAttribute('aria-label', c === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+      }
+      btn.addEventListener('click', function () {
+        var next = current() === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+        render();
+      });
+      mq.addEventListener && mq.addEventListener('change', render);
+      render();
+    })();
+  </script>
 </body>
 </html>
