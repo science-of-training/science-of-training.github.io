@@ -420,22 +420,6 @@ main { padding-bottom: 80px; }
 .info-dot:hover { background: var(--accent-soft-border); transform: translateY(-1px); }
 .info-dot:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
-.badge-new {
-  display: inline-block;
-  margin-left: 8px;
-  padding: 2px 9px;
-  border: 1px solid var(--accent-2-soft-border);
-  border-radius: 999px;
-  background: var(--accent-2-soft-bg);
-  color: var(--accent-2);
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-
 .bubble {
   max-width: min(340px, calc(100vw - 32px));
   margin: 0;
@@ -456,16 +440,16 @@ main { padding-bottom: 80px; }
   margin-bottom: 6px;
 }
 
-/* Anchor the bubble to the dot where supported; otherwise it stays a centered card. */
+/* Anchor the bubble just to the right of the dot where supported; otherwise
+   it stays a centered card. Flips to the left/below if there's no room. */
 @supports (anchor-name: --a) {
   .bubble {
     position: fixed;
     position-anchor: --dbg-anchor;
-    top: anchor(bottom);
-    left: anchor(center);
-    margin-top: 10px;
-    translate: -50%;
-    position-try-fallbacks: flip-block, flip-inline;
+    top: anchor(top);
+    left: anchor(right);
+    margin-left: 10px;
+    position-try-fallbacks: flip-inline, flip-block;
   }
 }
 
