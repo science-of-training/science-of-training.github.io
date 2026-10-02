@@ -1,6 +1,6 @@
-# The Science of Training: Predicting How Models Learn
+# Interpretability for the Science of Training: Emergence, Prediction, and Steering (STEPS)
 
-Website for the NeurIPS 2026 workshop. Hosted at https://science-of-training.github.io/.
+Website for the ICLR 2027 workshop. Hosted at https://science-of-training.github.io/.
 
 ## Structure
 - `index.html` — main landing page (about, goals, CFP, schedule, speakers, organizers)

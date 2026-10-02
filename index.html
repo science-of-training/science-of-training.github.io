@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Science of Training: Predicting How Models Learn — NeurIPS 2026 Workshop</title>
-  <meta name="description" content="A NeurIPS 2026 workshop on the science of training: describing trajectories, predicting outcomes, and steering training of large-scale ML models." />
+  <title>Interpretability for the Science of Training: Emergence, Prediction, and Steering (STEPS) — ICLR 2027 Workshop</title>
+  <meta name="description" content="An ICLR 2027 workshop on interpretability for the science of training: which interpretability methods work for understanding training, and what actions they enable that outcome-only evaluation cannot." />
   <link rel="icon" type="image/svg+xml" href="assets/logos/favicon.svg" />
   <link rel="apple-touch-icon" href="assets/logos/avatar-dark-1024.png" />
   <link rel="stylesheet" href="assets/styles.css" />
@@ -21,7 +21,7 @@
   <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">☾</button>
   <header class="hero">
     <nav class="nav">
-      <a class="brand" href="index.html">Science of Training <span class="brand-sub">· NeurIPS 2026</span></a>
+      <a class="brand" href="index.html">STEPS <span class="brand-sub">· ICLR 2027</span></a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#goals">Goals &amp; Topics</a></li>
@@ -36,13 +36,13 @@
 
     <div class="hero-inner">
       <h1 class="hero-lockup">
-        <img class="logo-light" src="assets/logos/logo-lockup-light.svg" alt="The Science of Training: Emergence, Prediction, and Steering (STEPS) — NeurIPS 2026 Workshop" />
-        <img class="logo-dark" src="assets/logos/logo-lockup-dark.svg" alt="The Science of Training: Emergence, Prediction, and Steering (STEPS) — NeurIPS 2026 Workshop" />
+        <img class="logo-light" src="assets/logos/logo-lockup-light.svg" alt="Interpretability for the Science of Training: Emergence, Prediction, and Steering (STEPS) — ICLR 2027 Workshop" />
+        <img class="logo-dark" src="assets/logos/logo-lockup-dark.svg" alt="Interpretability for the Science of Training: Emergence, Prediction, and Steering (STEPS) — ICLR 2027 Workshop" />
       </h1>
       <p class="tagline">Toward actionable training dynamics — describing trajectories, predicting outcomes, and steering training.</p>
       <p class="meta">
-        <span>📍 NeurIPS 2026 (venue TBA)</span>
-        <span>🗓 December 2026</span>
+        <span>📍 ICLR 2027 (venue TBA)</span>
+        <span>🗓 April 29 or 30, 2027 (TBD by ICLR)</span>
       </p>
       <p class="cta-row">
         <a class="button" href="assets/proposal.pdf" target="_blank" rel="noopener">View full proposal (PDF)</a>
@@ -54,24 +54,32 @@
     <section id="about" class="section">
       <h2>About the Workshop</h2>
       <p>
-        Although modern models are extensively evaluated after training, far less work has focused on
-        characterizing how individual training runs unfold. Aggregate predictions such as scaling laws
-        and architecture-based estimators have produced valuable high-level insights, and recent studies
-        of training dynamics shed light on how patterns emerge — yet these analyses are typically
-        descriptive or post-hoc, and do not capture the dynamics of individual trajectories.
+        Interpretability research has produced a wide-ranging toolkit — probing, sparse dictionary
+        learning, data attribution — but these methods are mostly applied to <em>finished</em> models.
+        How a model got there is studied separately: aggregate predictors such as scaling laws and
+        architecture-based performance estimation forecast final performance, while studies of training
+        dynamics document when representations and behaviors emerge, whether over training steps or
+        across scale. Together, these lines of work establish that the path a model takes through
+        training shapes what it becomes.
       </p>
       <p>
-        Understanding training at the trajectory level reveals signals that final-accuracy
-        evaluations miss: models can score well on downstream evaluations while becoming overtrained
-        and hard to finetune; training dynamics can predict whether subsequent adaptation will succeed,
-        degrade, or induce forgetting. To bridge understanding and practice, methods should move
-        beyond description toward diagnosing dynamic failures and guiding interventions during training.
+        <strong>So which interpretability methods work for understanding training, and what actions can
+        they enable that outcome-only evaluation cannot?</strong> That question is the focus of this
+        workshop.
       </p>
       <p>
-        <strong>Prediction is the critical bridge between insight and action.</strong> To act on training,
-        we must anticipate how models will evolve with data, scale, and optimization. This workshop
-        aims to move from descriptive to predictive understanding — and to lay the groundwork for
-        translating that understanding into prescriptive interventions.
+        A trajectory-level view is useful precisely because it surfaces phenomena that final perplexity,
+        accuracy, or win-rates cannot. Models may perform well on downstream evaluations while becoming
+        overtrained and difficult to fine-tune afterward; if model flexibility could be quantified
+        <em>during</em> training, such failure modes could be anticipated before they manifest
+        downstream. In a similar vein, recent work on the interaction between fine-tuning and
+        pretraining suggests training dynamics can predict when adaptation will succeed, degrade, or
+        induce forgetting.
+      </p>
+      <p>
+        Bridging understanding and practice means moving beyond conceptual description toward
+        diagnosing failures that outcome-only evaluation misses, and toward guiding interventions
+        while training is still underway. We organize this around three escalating goals.
       </p>
     </section>
 
@@ -118,40 +126,45 @@
       <p>
         We invite submissions of original work, position papers, and experience reports that advance
         trajectory-level understanding of training dynamics. Negative results and replication studies
-        are explicitly welcome. Submission portal and template details will be posted here.
+        are explicitly welcome. We invite short (5-page) or long (9-page) papers; submissions will be
+        managed via OpenReview. Portal and template details will be posted here.
       </p>
       <div class="dates-grid">
         <div class="date-card">
-          <p class="date-label">Abstract submission</p>
-          <p class="date-value">Aug 22, 2026</p>
-        </div>
-        <div class="date-card">
           <p class="date-label">Paper submission</p>
-          <p class="date-value">Aug 29, 2026</p>
+          <p class="date-value">Feb 1, 2027</p>
         </div>
         <div class="date-card">
           <p class="date-label">Reviewer bidding &amp; assignment</p>
-          <p class="date-value">Aug 30 – Sep 2, 2026</p>
+          <p class="date-value">Feb 2 – 4, 2027</p>
         </div>
         <div class="date-card">
           <p class="date-label">Reviewer deadline</p>
-          <p class="date-value">Sep 18, 2026</p>
+          <p class="date-value">Feb 18, 2027</p>
         </div>
         <div class="date-card">
           <p class="date-label">Notification</p>
-          <p class="date-value">Sep 29, 2026</p>
+          <p class="date-value">Feb 24, 2027</p>
+        </div>
+        <div class="date-card">
+          <p class="date-label">Papers public on OpenReview</p>
+          <p class="date-value">Feb 26, 2027</p>
         </div>
         <div class="date-card">
           <p class="date-label">Camera-ready</p>
-          <p class="date-value">Oct 20, 2026</p>
+          <p class="date-value">Mar 19, 2027</p>
+        </div>
+        <div class="date-card">
+          <p class="date-label">Schedule posted on iclr.cc</p>
+          <p class="date-value">Mar 26, 2027</p>
         </div>
         <div class="date-card">
           <p class="date-label">Final program due</p>
-          <p class="date-value">Oct 27, 2026</p>
+          <p class="date-value">Apr 14, 2027</p>
         </div>
         <div class="date-card">
           <p class="date-label">Workshop</p>
-          <p class="date-value">NeurIPS 2026</p>
+          <p class="date-value">Apr 29 or 30, 2027</p>
         </div>
       </div>
       <p class="cta-row">
@@ -200,19 +213,10 @@
         <div class="speaker">
           <p class="name">Andrew Saxe</p>
           <p class="affil">University College London</p>
-          <p class="status confirmed">Confirmed · remote (in person if Paris)</p>
-          <details class="bio-details">
-            <summary>About</summary>
-            <p class="bio">Professor at UCL, developing mathematical and experimental tools to understand how learning emerges in brains and artificial neural networks.</p>
-          </details>
-        </div>
-        <div class="speaker">
-          <p class="name">Angelica Chen</p>
-          <p class="affil">Google DeepMind</p>
           <p class="status confirmed">Confirmed</p>
           <details class="bio-details">
             <summary>About</summary>
-            <p class="bio">Senior research scientist working on Gemini training at Google DeepMind.</p>
+            <p class="bio">Professor at UCL, developing mathematical and experimental tools to understand how learning emerges in brains and artificial neural networks.</p>
           </details>
         </div>
         <div class="speaker">
@@ -227,10 +231,19 @@
         <div class="speaker">
           <p class="name">Shikai Qiu</p>
           <p class="affil">New York University</p>
-          <p class="status confirmed">Confirmed</p>
+          <p class="status tentative">Invited</p>
           <details class="bio-details">
             <summary>About</summary>
             <p class="bio">PhD student at NYU researching the science of scaling neural networks and optimization.</p>
+          </details>
+        </div>
+        <div class="speaker">
+          <p class="name">Kyle Lo</p>
+          <p class="affil">Microsoft AI</p>
+          <p class="status confirmed">Confirmed</p>
+          <details class="bio-details">
+            <summary>About</summary>
+            <p class="bio">Member of technical staff at Microsoft AI, who previously co-led the OLMo project on open language modeling. His current research focuses on large-scale pretraining of language models, with an emphasis on data curation, data mixing, benchmark validity, efficient experimentation, and generalization across model scales.</p>
           </details>
         </div>
         <div class="speaker">
@@ -240,24 +253,6 @@
           <details class="bio-details">
             <summary>About</summary>
             <p class="bio">Member of technical staff at Thinking Machines Lab, working on continual multimodal learning with minimal and natural supervision.</p>
-          </details>
-        </div>
-        <div class="speaker">
-          <p class="name">Naomi Saphra</p>
-          <p class="affil">Kempner Institute, Harvard · incoming faculty, Boston University</p>
-          <p class="status confirmed">Confirmed</p>
-          <details class="bio-details">
-            <summary>About</summary>
-            <p class="bio">Research fellow at the Kempner Institute (Harvard) and incoming faculty at Boston University, researching NLP training dynamics and interpretability.</p>
-          </details>
-        </div>
-        <div class="speaker">
-          <p class="name">Misha Belkin</p>
-          <p class="affil">UC San Diego</p>
-          <p class="status tentative">Tentative</p>
-          <details class="bio-details">
-            <summary>About</summary>
-            <p class="bio">Professor at UCSD developing theory for modern machine learning and deep learning — high-dimensional learning, interpolation, kernel methods, and double descent.</p>
           </details>
         </div>
       </div>
@@ -293,6 +288,11 @@
             <summary>Full bio</summary>
             <p class="bio">Kaiser Sun is a Ph.D. student in Computer Science at the Data Science and AI Institute and the Center for Language and Speech Processing at Johns Hopkins University. Their research focuses on the training dynamics, evaluation, and interpretability of Large Language Models. Generally, Kaiser is interested in understanding how language models function and exploring how we can change them. Their work has been recognized with an honorable mention at CoNLL 2023, an outstanding paper award at MLRC 2022, and coverage by a few media outlets such as MIT Technology Review and WIRED. Previously, they obtained their B.S. and M.S. from the University of Washington and were a researcher at Meta AI, Together AI, and AWS AI Labs.</p>
           </details>
+        </div>
+        <div class="organizer">
+          <p class="name">Daniel Khashabi</p>
+          <p class="affil">Johns Hopkins University</p>
+          <p class="interests">natural language processing, reasoning</p>
         </div>
         <div class="organizer">
           <p class="name">Stella Biderman</p>
