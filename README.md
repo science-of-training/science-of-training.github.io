@@ -1,6 +1,6 @@
-# Interpretability for the Science of Training: Emergence, Prediction, and Steering (STEPS)
+# The Science of Unfinished Models: Emergence, Prediction, and Steering (STEPS)
 
-Website for the ICLR 2027 workshop. Hosted at https://science-of-training.github.io/.
+Website for the ICLR 2027 workshop. Hosted at https://science-of-unfinished-models.github.io/.
 
 ## Structure
 - `index.html` — main landing page (about, goals, CFP, schedule, speakers, organizers)

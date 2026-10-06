@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 200" role="img" aria-label="Interpretability for the Science of Training workshop horizontal lockup">
-  <title>Interpretability for the Science of Training: Emergence, Prediction, and Steering (STEPS) — ICLR 2027 Workshop</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 200" role="img" aria-label="The Science of Unfinished Models workshop horizontal lockup">
+  <title>The Science of Unfinished Models: Emergence, Prediction, and Steering (STEPS) — ICLR 2027 Workshop</title>
   <g transform="translate(20, 20)">
     <circle cx="80" cy="80" r="72" fill="none" stroke="#1f3a8a" stroke-width="1.8"/>
     <circle cx="80" cy="80" r="66" fill="none" stroke="#1f3a8a" stroke-width="0.4" opacity="0.3"/>
@@ -15,10 +15,10 @@
   </g>
   <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
     <text x="200" y="52" font-size="12" fill="#80868b" letter-spacing="1.6">INTERPRETABILITY FOR</text>
-    <text x="200" y="88" font-size="32" font-weight="500" fill="#1a1a1a">The Science of Training</text>
+    <text x="200" y="88" font-size="28" font-weight="500" fill="#1a1a1a">The Science of Unfinished Models</text>
     <text x="200" y="112" font-size="16" fill="#5f6368">Emergence, Prediction, and Steering</text>
     <text x="200" y="132" font-size="16" fill="#5f6368">· STEPS</text>
-    <line x1="200" y1="148" x2="540" y2="148" stroke="#dadce0" stroke-width="0.5"/>
+    <line x1="200" y1="148" x2="625" y2="148" stroke="#dadce0" stroke-width="0.5"/>
     <text x="200" y="168" font-size="13" fill="#80868b" letter-spacing="1">ICLR 2027 · WORKSHOP</text>
   </g>
 </svg>
