@@ -26,6 +26,6 @@
     <text x="200" y="124" font-size="16" fill="#c8c2b4">· <tspan font-weight="700" fill="#34d399">WIP</tspan></text>
     <rect x="200" y="136" width="427" height="5" rx="2.5" fill="#3c4043"/>
     <rect class="bar-fill" x="200" y="136" width="222" height="5" rx="2.5" fill="#34d399"/>
-    <text x="200" y="164" font-size="13" fill="#8b8674" letter-spacing="1">ICLR 2027 · WORKSHOP · IN PROGRESS</text>
+    <text x="200" y="164" font-size="13" fill="#8b8674" letter-spacing="1">ICLR 2027</text>
   </g>
 </svg>
