@@ -14,7 +14,10 @@
   <header class="hero compact">
     <nav class="nav">
       <a class="brand" href="index.html">🚧 WIP <span class="brand-sub">· ICLR 2027</span></a>
-      <ul class="nav-links">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu"
+        onclick="this.setAttribute('aria-expanded', this.closest('.nav').classList.toggle('open'))">☰</button>
+      <ul class="nav-links" id="nav-links"
+        onclick="if (event.target.closest('a')) { var n = this.closest('.nav'); n.classList.remove('open'); n.querySelector('.nav-toggle').setAttribute('aria-expanded', 'false'); }">
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#goals">Goals &amp; Topics</a></li>
         <li><a href="index.html#cfp">Call for Papers</a></li>

@@ -164,6 +164,9 @@ a:hover { text-decoration: underline; }
   color: var(--fg-muted);
   opacity: 0.75;
 }
+@media (max-width: 600px) {
+  .photo-credit { left: 16px; text-align: right; font-size: 0.66rem; }
+}
 /* Page content after the photo hero: frosted glass so the photo shows
    through faintly as you scroll. */
 .hero:not(.compact) ~ main,
@@ -224,9 +227,17 @@ a:hover { text-decoration: underline; }
   .hero-fog::before { animation: none; }
 }
 @media (max-width: 600px) {
-  /* Text spans the full width on phones, so fog the whole photo more evenly. */
+  /* Phones get a portrait crop that keeps the sun and Seal Rock in frame
+     (!important beats the inline desktop image on the element). */
+  .hero-photo {
+    background-image: url("hero/sf-1-mobile.jpg") !important;
+    background-position: right top;
+  }
+  /* Light fog: enough under the menu and text, but let the sun glow through. */
   .hero-fog {
-    background: linear-gradient(180deg, var(--hero-fog) 0%, var(--hero-fog) 70%, transparent 100%);
+    background:
+      linear-gradient(180deg, var(--nav-fog) 0, rgba(19, 27, 43, 0.45) 140px, transparent 230px),
+      linear-gradient(180deg, transparent 30%, var(--hero-fog) 50%, var(--hero-fog) 85%, transparent 100%);
   }
 }
 .hero.compact { padding-bottom: 24px; }
@@ -371,7 +382,7 @@ a:hover { text-decoration: underline; }
 }
 @media (max-width: 600px) {
   .hero { padding-bottom: 48px; }
-  .hero-inner { padding: 24px 14px 0; }
+  .hero-inner { padding: 6px 14px 0; }
   .nav { padding: 14px 16px; }
   .section { padding: 40px 16px; }
 
@@ -739,4 +750,66 @@ main { padding-bottom: 80px; }
   text-align: center;
   color: var(--fg-muted);
   font-size: 0.9rem;
+}
+
+/* Phones: swap in the compact lockup (ring beside a 3-line title) so the
+   logo stays legible, and keep the hero text below it understated. */
+.logo-stacked { display: none; }
+.text-short { display: none; }
+@media (max-width: 600px) {
+  .hero-lockup .logo-light,
+  .hero-lockup .logo-dark { display: none !important; }
+  .hero-lockup .logo-stacked { display: block; width: 100%; height: auto; }
+  .hero:not(.compact) .hero-lockup { margin-bottom: 20px; padding: 14px 16px; }
+  .hero:not(.compact) .tagline { font-size: 0.76rem; line-height: 1.5; margin-bottom: 10px; }
+  .hero:not(.compact) .meta { font-size: 0.68rem; gap: 2px 12px; }
+  .hero:not(.compact) .cta-row { margin-top: 12px; }
+  .hero:not(.compact) .button { font-size: 0.72rem; padding: 5px 11px; }
+  .photo-credit { font-size: 0.6rem; text-wrap: balance; }
+  .text-full { display: none; }
+  .text-short { display: inline; }
+}
+
+/* Phones: the menu collapses behind a "Menu" button and opens as a
+   frosted dropdown over the page. */
+.nav-toggle { display: none; }
+@media (max-width: 600px) {
+  .nav { position: relative; }
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 11px;
+    font: inherit;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: var(--fg);
+    background: var(--lockup-bg);
+    border: 1px solid var(--lockup-border);
+    border-radius: 999px;
+    cursor: pointer;
+    -webkit-backdrop-filter: blur(6px);
+            backdrop-filter: blur(6px);
+  }
+  .nav-links { display: none; }
+  .nav.open .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    position: absolute;
+    top: 100%;
+    left: 16px;
+    right: 16px;
+    z-index: 10;
+    padding: 8px 16px;
+    background: var(--nav-fog);
+    border: 1px solid var(--lockup-border);
+    border-radius: 14px;
+    box-shadow: 0 12px 30px var(--lockup-shadow);
+    -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+  }
+  .nav.open .nav-links a { display: block; padding: 8px 0; font-size: 0.92rem; }
+}
 }

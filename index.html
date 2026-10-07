@@ -21,7 +21,10 @@
     </div>
     <nav class="nav">
       <a class="brand" href="index.html">🚧 WIP <span class="brand-sub">· ICLR 2027</span></a>
-      <ul class="nav-links">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu"
+        onclick="this.setAttribute('aria-expanded', this.closest('.nav').classList.toggle('open'))">☰</button>
+      <ul class="nav-links" id="nav-links"
+        onclick="if (event.target.closest('a')) { var n = this.closest('.nav'); n.classList.remove('open'); n.querySelector('.nav-toggle').setAttribute('aria-expanded', 'false'); }">
         <li><a href="#about">About</a></li>
         <li><a href="#goals">Goals &amp; Topics</a></li>
         <li><a href="#cfp">Call for Papers</a></li>
@@ -37,10 +40,11 @@
       <h1 class="hero-lockup">
         <img class="logo-light" src="assets/logos/logo-lockup-light.svg" alt="WIP: Workshop on Interpretability in Progress: Understanding, Forecasting, and Repairing Training — ICLR 2027 Workshop" />
         <img class="logo-dark" src="assets/logos/logo-lockup-dark.svg" alt="WIP: Workshop on Interpretability in Progress: Understanding, Forecasting, and Repairing Training — ICLR 2027 Workshop" />
+        <img class="logo-stacked" src="assets/logos/logo-stacked-dark.svg" alt="WIP: Workshop on Interpretability in Progress: Understanding, Forecasting, and Repairing Training — ICLR 2027 Workshop" />
       </h1>
       <p class="tagline">Toward actionable training dynamics — describing trajectories, predicting outcomes, and repairing training.</p>
       <p class="meta">
-        <span>📍 ICLR 2027 · San Francisco 🌉</span>
+        <span>📍 ICLR 2027 · <span class="text-full">San Francisco</span><span class="text-short">SF</span> 🌉</span>
         <span>🗓 April 29 or 30, 2027 (TBD by ICLR)</span>
         <span>🚧 Status: in progress</span>
       </p>
