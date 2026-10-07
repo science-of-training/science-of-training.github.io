@@ -465,6 +465,19 @@ main { padding-bottom: 80px; }
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 16px;
+  text-align: center;
+}
+.speaker .bio-details .bio { text-align: left; }
+.speaker .avatar {
+  display: block;
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 30%;
+  border: 1px solid var(--border);
+  background: var(--bg);
 }
 .speaker .name { margin: 0; font-weight: 600; }
 .speaker .affil { margin: 4px 0 0; color: var(--fg-muted); font-size: 0.9rem; }
