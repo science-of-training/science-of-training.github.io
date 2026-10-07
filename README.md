@@ -1,4 +1,4 @@
-# The Science of Unfinished Models: Emergence, Prediction, and Steering (STEPS)
+# WIP: Workshop on Interpretability in Progress: Understanding, Forecasting, and Repairing Training
 
 Website for the ICLR 2027 workshop. Hosted at https://science-of-unfinished-models.github.io/.
 

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Science of Unfinished Models: Emergence, Prediction, and Steering (STEPS) — ICLR 2027 Workshop</title>
-  <meta name="description" content="An ICLR 2027 workshop on the science of unfinished models: which interpretability methods work for understanding training, and what actions they enable that outcome-only evaluation cannot." />
+  <title>WIP: Workshop on Interpretability in Progress — ICLR 2027</title>
+  <meta name="description" content="An ICLR 2027 workshop asking which interpretability methods work for understanding training and what actions they enable — describing trajectories, forecasting outcomes, and repairing training." />
   <link rel="icon" type="image/svg+xml" href="assets/logos/favicon.svg" />
   <link rel="apple-touch-icon" href="assets/logos/avatar-dark-1024.png" />
   <link rel="stylesheet" href="assets/styles.css" />
@@ -21,7 +21,7 @@
   <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">☾</button>
   <header class="hero">
     <nav class="nav">
-      <a class="brand" href="index.html">STEPS <span class="brand-sub">· ICLR 2027</span></a>
+      <a class="brand" href="index.html">WIP <span class="brand-sub">· ICLR 2027</span></a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#goals">Goals &amp; Topics</a></li>
@@ -36,13 +36,14 @@
 
     <div class="hero-inner">
       <h1 class="hero-lockup">
-        <img class="logo-light" src="assets/logos/logo-lockup-light.svg" alt="The Science of Unfinished Models: Emergence, Prediction, and Steering (STEPS) — ICLR 2027 Workshop" />
-        <img class="logo-dark" src="assets/logos/logo-lockup-dark.svg" alt="The Science of Unfinished Models: Emergence, Prediction, and Steering (STEPS) — ICLR 2027 Workshop" />
+        <img class="logo-light" src="assets/logos/logo-lockup-light.svg" alt="WIP: Workshop on Interpretability in Progress: Understanding, Forecasting, and Repairing Training — ICLR 2027 Workshop" />
+        <img class="logo-dark" src="assets/logos/logo-lockup-dark.svg" alt="WIP: Workshop on Interpretability in Progress: Understanding, Forecasting, and Repairing Training — ICLR 2027 Workshop" />
       </h1>
-      <p class="tagline">Toward actionable training dynamics — describing trajectories, predicting outcomes, and steering training.</p>
+      <p class="tagline">Toward actionable training dynamics — describing trajectories, predicting outcomes, and repairing training.</p>
       <p class="meta">
         <span>📍 ICLR 2027 (venue TBA)</span>
         <span>🗓 April 29 or 30, 2027 (TBD by ICLR)</span>
+        <span>🚧 Status: in progress</span>
       </p>
       <p class="cta-row">
         <a class="button" href="assets/proposal.pdf" target="_blank" rel="noopener">View full proposal (PDF)</a>
@@ -54,32 +55,32 @@
     <section id="about" class="section">
       <h2>About the Workshop</h2>
       <p>
-        Interpretability research has produced a wide-ranging toolkit — probing, sparse dictionary
-        learning, data attribution — but these methods are mostly applied to <em>finished</em> models.
-        How a model got there is studied separately: aggregate predictors such as scaling laws and
-        architecture-based performance estimation forecast final performance, while studies of training
-        dynamics document when representations and behaviors emerge, whether over training steps or
-        across scale. Together, these lines of work establish that the path a model takes through
-        training shapes what it becomes.
+        Interpretability research has produced a robust toolkit for understanding models — probing,
+        sparse dictionary learning, data attribution — but these tools are often applied only to models
+        at the <em>end</em> of training. How a model got there is studied separately: aggregate
+        relationships such as scaling laws and architecture-based performance estimation reliably
+        predict final losses, while studies of training dynamics document when representations and
+        behaviors emerge, over training steps and across scale.
       </p>
       <p>
-        <strong>So which interpretability methods work for understanding training, and what actions can
-        they enable that outcome-only evaluation cannot?</strong> That question is the focus of this
-        workshop.
+        The path a model takes through training shapes what it becomes, and a trajectory-level
+        understanding may let us trace how its behaviors emerge, anticipate failures and safety risks,
+        and intervene before they fully manifest. <strong>This workshop asks which interpretability
+        methods work for understanding training, and what actions they might enable that outcome-only
+        evaluation cannot.</strong>
       </p>
       <p>
-        A trajectory-level view is useful precisely because it surfaces phenomena that final perplexity,
-        accuracy, or win-rates cannot. Models may perform well on downstream evaluations while becoming
-        overtrained and difficult to fine-tune afterward; if model flexibility could be quantified
-        <em>during</em> training, such failure modes could be anticipated before they manifest
-        downstream. In a similar vein, recent work on the interaction between fine-tuning and
-        pretraining suggests training dynamics can predict when adaptation will succeed, degrade, or
-        induce forgetting.
+        That view is useful precisely because it surfaces phenomena final perplexity, accuracy, or
+        win-rates cannot. Models may perform well on downstream evaluations while becoming overtrained
+        and difficult to fine-tune afterward; if model flexibility could be quantified <em>during</em>
+        training, such failure modes could be anticipated before they manifest downstream. Recent work
+        on the interaction between fine-tuning and pretraining likewise suggests training dynamics can
+        predict when adaptation will succeed, degrade, or induce forgetting.
       </p>
       <p>
-        Bridging understanding and practice means moving beyond conceptual description toward
-        diagnosing failures that outcome-only evaluation misses, and toward guiding interventions
-        while training is still underway. We organize this around three escalating goals.
+        We welcome both theoretical and empirical work. By bringing together academic researchers and
+        practitioners, the workshop aims to move from understanding training to foresight and
+        intervention — organized around three escalating goals.
       </p>
     </section>
 
@@ -90,30 +91,27 @@
       <div class="goals-grid">
         <article class="goal">
           <h3 class="goal-title"><span class="goal-num">1.</span> Descriptive</h3>
-          <p class="goal-sub">Characterizing how training unfolds</p>
+          <p class="goal-sub">How representations and model internals evolve over training</p>
           <ul>
             <li>Representation formation, phase transitions, reorganization, and interaction across training</li>
-            <li>Interpretability across time, scale, gradients, and optimizer dynamics</li>
-            <li>Random variations and initial conditions</li>
+            <li>Interpretability across time, scale, gradients, and optimization dynamics</li>
+            <li>Characterizing the impact of initializations and run-to-run variations</li>
           </ul>
         </article>
         <article class="goal">
           <h3 class="goal-title"><span class="goal-num">2.</span> Predictive</h3>
-          <p class="goal-sub">Forecasting from early signals</p>
+          <p class="goal-sub">Early signals that forecast later capabilities, failures, generalization, and structural shifts</p>
           <ul>
-            <li>Early monitoring of training failures and criteria for stopping</li>
-            <li>Stress-testing of early checkpoints; misrepresentations that lead to downstream malformation</li>
-            <li>Pretraining evaluations and invariants predicting post-training behavior across scale</li>
+            <li>Pretraining evaluations that predict post-training behavior</li>
             <li>Generalization prediction: what transfers from which data, when, and why</li>
             <li>Training outcome prediction, including negative results</li>
           </ul>
         </article>
         <article class="goal">
           <h3 class="goal-title"><span class="goal-num">3.</span> Prescriptive</h3>
-          <p class="goal-sub">Steering and repairing training</p>
+          <p class="goal-sub">Controlling and repairing training — checkpoint-level interventions, data mixing and filtering, or steering learning directly with methods such as gradient routing and targeted regularization</p>
           <ul>
-            <li>Training repair: reverting to and correcting from earlier checkpoints</li>
-            <li>Causal and interventional methods for training</li>
+            <li>Training repair, such as reverting to and correcting from earlier checkpoints</li>
             <li>Phase-specific data selection strategies</li>
             <li>Controlling model behavior during training</li>
           </ul>
@@ -135,11 +133,11 @@
           <p class="date-value">Feb 1, 2027</p>
         </div>
         <div class="date-card">
-          <p class="date-label">Reviewer bidding &amp; assignment</p>
+          <p class="date-label">Reviewer assignment</p>
           <p class="date-value">Feb 2 – 4, 2027</p>
         </div>
         <div class="date-card">
-          <p class="date-label">Reviewer deadline</p>
+          <p class="date-label">Review deadline</p>
           <p class="date-value">Feb 18, 2027</p>
         </div>
         <div class="date-card">
@@ -208,7 +206,7 @@
 
     <section id="speakers" class="section">
       <h2>Invited Speakers and Panelists</h2>
-      <p class="muted">The division between talks and the panel is still being finalized; all confirmed speakers and panelists are listed together below.</p>
+      <p class="muted">Below are the currently confirmed speakers and panelists; the division between talks and the panel is still being finalized.</p>
       <div class="speakers-grid">
         <div class="speaker">
           <p class="name">Andrew Saxe</p>
@@ -216,7 +214,7 @@
           <p class="status confirmed">Confirmed</p>
           <details class="bio-details">
             <summary>About</summary>
-            <p class="bio">Professor at UCL, developing mathematical and experimental tools to understand how learning emerges in brains and artificial neural networks.</p>
+            <p class="bio">Professor at UCL, whose lab develops mathematical and experimental tools to understand how learning emerges in brains and artificial neural networks.</p>
           </details>
         </div>
         <div class="speaker">
@@ -225,16 +223,7 @@
           <p class="status confirmed">Confirmed</p>
           <details class="bio-details">
             <summary>About</summary>
-            <p class="bio">Assistant professor at Princeton, developing physics-inspired theory and tools for understanding learning and decision-making in biological and artificial systems.</p>
-          </details>
-        </div>
-        <div class="speaker">
-          <p class="name">Shikai Qiu</p>
-          <p class="affil">New York University</p>
-          <p class="status tentative">Invited</p>
-          <details class="bio-details">
-            <summary>About</summary>
-            <p class="bio">PhD student at NYU researching the science of scaling neural networks and optimization.</p>
+            <p class="bio">Assistant professor at Princeton, whose lab develops physics-inspired theory and tools for understanding learning and decision-making in biological and artificial systems.</p>
           </details>
         </div>
         <div class="speaker">
@@ -252,11 +241,20 @@
           <p class="status confirmed">Confirmed</p>
           <details class="bio-details">
             <summary>About</summary>
-            <p class="bio">Member of technical staff at Thinking Machines Lab, working on continual multimodal learning with minimal and natural supervision.</p>
+            <p class="bio">Member of technical staff at Thinking Machines Lab. His research focuses on continual learning with minimal and natural supervision.</p>
+          </details>
+        </div>
+        <div class="speaker">
+          <p class="name">Stephanie Chan</p>
+          <p class="affil">Google DeepMind</p>
+          <p class="status confirmed">Confirmed</p>
+          <details class="bio-details">
+            <summary>About</summary>
+            <p class="bio">Staff research scientist at Google DeepMind. Her current research focuses on the future impacts of AI and the science of AI.</p>
           </details>
         </div>
       </div>
-      <p class="muted" style="margin-top:18px;">Most of our speakers and panelists are confirmed; possible additions will be announced as further invitations are finalized.</p>
+      <p class="muted" style="margin-top:18px;">We intend to invite an additional PhD student speaker; further additions will be announced as invitations are finalized.</p>
     </section>
 
     <section id="organizers" class="section alt">
@@ -292,7 +290,11 @@
         <div class="organizer">
           <p class="name">Daniel Khashabi</p>
           <p class="affil">Johns Hopkins University</p>
-          <p class="interests">natural language processing, reasoning</p>
+          <p class="interests">reasoning, discovery</p>
+          <details class="bio-details">
+            <summary>Full bio</summary>
+            <p class="bio">Daniel Khashabi is an Assistant Professor of Computer Science at Johns Hopkins University, affiliated with the Data Science and AI Institute and the Center for Language and Speech Processing (CLSP). He is interested in the intersection of reasoning and discovery. He is the recipient of the NSF CAREER award (2026), Ai2's Lasting Impact Award (2024), multiple industry faculty awards (Amazon, Google, Apple), and several Best Paper Awards (COLM 2024, ACL 2023, NAACL 2022). His teaching earned him the Joel Dean Award for Excellence in Teaching in the Department of Computer Science in 2025. Most relevant to this proposal, he has co-organized Towards Test-Time Continual Learning Agents at NeurIPS 2026, Interpreting Agent Behavior (IAB) at NeurIPS 2026, the Workshop on Instruction Tuning and Instruction Following at NeurIPS 2023, and the Student Research Workshop at ACL 2019.</p>
+          </details>
         </div>
         <div class="organizer">
           <p class="name">Stella Biderman</p>
@@ -319,7 +321,7 @@
   </main>
 
   <footer class="footer">
-    <p>© <span id="year"></span> Unfinished Models Workshop. Site source on <a href="https://github.com/science-of-unfinished-models/science-of-unfinished-models.github.io">GitHub</a>.</p>
+    <p>© <span id="year"></span> WIP Workshop. Site source on <a href="https://github.com/science-of-unfinished-models/science-of-unfinished-models.github.io">GitHub</a>.</p>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   <script>
