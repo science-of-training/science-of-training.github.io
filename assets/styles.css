@@ -3,70 +3,109 @@
    - prefers-color-scheme: dark applies dark tokens when no explicit theme is set.
    - [data-theme="dark"] / [data-theme="light"] override the OS preference. */
 
+/* Palette: "Ocean Beach at golden hour" — warm sand + Pacific blue + sunset
+   amber, to sit with the hero photos. */
+
 :root,
 :root[data-theme="light"] {
   color-scheme: light;
-  --bg: #ffffff;
-  --bg-alt: #f5f7fb;
+  --bg: #fdfbf7;
+  --bg-alt: #f7f2ea;
   --surface: #ffffff;
-  --fg: #16181d;
-  --fg-muted: #5b6472;
-  --accent: #2f5fd4;
-  --accent-2: #7c4fc4;
-  --accent-hover: #1f4cb8;
-  --border: #e3e6ec;
-  --border-soft: #ecedf2;
+  --fg: #1b1d24;
+  --fg-muted: #5e6370;
+  --accent: #1f4fa8;
+  --accent-2: #b0501a;
+  --accent-hover: #173d85;
+  --border: #ebe4d8;
+  --border-soft: #f3eee5;
   --button-fg: #ffffff;
-  --accent-soft-bg: rgba(47, 95, 212, 0.10);
-  --accent-soft-border: rgba(47, 95, 212, 0.30);
-  --accent-2-soft-bg: rgba(124, 79, 196, 0.10);
-  --accent-2-soft-border: rgba(124, 79, 196, 0.30);
-  --hero-glow-1: rgba(47, 95, 212, 0.10);
-  --hero-glow-2: rgba(124, 79, 196, 0.08);
+  --accent-soft-bg: rgba(31, 79, 168, 0.08);
+  --accent-soft-border: rgba(31, 79, 168, 0.28);
+  --accent-2-soft-bg: rgba(176, 80, 26, 0.09);
+  --accent-2-soft-border: rgba(176, 80, 26, 0.30);
+  --hero-glow-1: rgba(240, 150, 60, 0.16);
+  --hero-glow-2: rgba(31, 79, 168, 0.06);
+  --hero-photo-opacity: 1;
+  --hero-fog: rgba(253, 251, 247, 0.35);
+  --nav-fog: rgba(253, 251, 247, 0.88);
+  --page-glass: rgba(253, 251, 247, 0.55);
+  --page-glass-alt: rgba(247, 242, 234, 0.25);
+  --hero-nav: #3d4250;
+  --hero-nav-glow: none;
+  --hero-text: #1f2229;
+  --hero-text-glow: none;
+  --lockup-bg: rgba(255, 255, 255, 0.34);
+  --lockup-border: rgba(255, 255, 255, 0.7);
+  --lockup-shadow: rgba(120, 80, 30, 0.10);
   --max: 960px;
 }
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg: #0b0d12;
-  --bg-alt: #11141b;
-  --surface: #161a23;
-  --fg: #e6e8ef;
-  --fg-muted: #9aa3b2;
-  --accent: #7aa2f7;
-  --accent-2: #bb9af7;
-  --accent-hover: #9bbcff;
-  --border: #232836;
-  --border-soft: #1c2030;
-  --button-fg: #0b0d12;
-  --accent-soft-bg: rgba(122, 162, 247, 0.15);
-  --accent-soft-border: rgba(122, 162, 247, 0.35);
-  --accent-2-soft-bg: rgba(187, 154, 247, 0.12);
-  --accent-2-soft-border: rgba(187, 154, 247, 0.35);
-  --hero-glow-1: rgba(122, 162, 247, 0.18);
-  --hero-glow-2: rgba(187, 154, 247, 0.12);
+  --bg: #131b2b;
+  --bg-alt: #182236;
+  --surface: #1d2840;
+  --fg: #ece8e1;
+  --fg-muted: #b0b6c3;
+  --accent: #8ab4f8;
+  --accent-2: #f2a65a;
+  --accent-hover: #a8c7fa;
+  --border: #2a3550;
+  --border-soft: #222c42;
+  --button-fg: #131b2b;
+  --accent-soft-bg: rgba(138, 180, 248, 0.14);
+  --accent-soft-border: rgba(138, 180, 248, 0.35);
+  --accent-2-soft-bg: rgba(242, 166, 90, 0.12);
+  --accent-2-soft-border: rgba(242, 166, 90, 0.35);
+  --hero-glow-1: rgba(242, 166, 90, 0.14);
+  --hero-glow-2: rgba(138, 180, 248, 0.10);
+  --hero-photo-opacity: 0.85;
+  --hero-fog: rgba(19, 27, 43, 0.50);
+  --nav-fog: rgba(19, 27, 43, 0.92);
+  --page-glass: rgba(19, 27, 43, 0.58);
+  --page-glass-alt: rgba(24, 34, 54, 0.25);
+  --hero-nav: #e3e6ec;
+  --hero-nav-glow: 0 1px 6px rgba(0, 0, 0, 0.7);
+  --hero-text: var(--fg);
+  --hero-text-glow: none;
+  --lockup-bg: rgba(19, 27, 43, 0.42);
+  --lockup-border: rgba(255, 255, 255, 0.08);
+  --lockup-shadow: rgba(0, 0, 0, 0.30);
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
     color-scheme: dark;
-    --bg: #0b0d12;
-    --bg-alt: #11141b;
-    --surface: #161a23;
-    --fg: #e6e8ef;
-    --fg-muted: #9aa3b2;
-    --accent: #7aa2f7;
-    --accent-2: #bb9af7;
-    --accent-hover: #9bbcff;
-    --border: #232836;
-    --border-soft: #1c2030;
-    --button-fg: #0b0d12;
-    --accent-soft-bg: rgba(122, 162, 247, 0.15);
-    --accent-soft-border: rgba(122, 162, 247, 0.35);
-    --accent-2-soft-bg: rgba(187, 154, 247, 0.12);
-    --accent-2-soft-border: rgba(187, 154, 247, 0.35);
-    --hero-glow-1: rgba(122, 162, 247, 0.18);
-    --hero-glow-2: rgba(187, 154, 247, 0.12);
+    --bg: #131b2b;
+    --bg-alt: #182236;
+    --surface: #1d2840;
+    --fg: #ece8e1;
+    --fg-muted: #b0b6c3;
+    --accent: #8ab4f8;
+    --accent-2: #f2a65a;
+    --accent-hover: #a8c7fa;
+    --border: #2a3550;
+    --border-soft: #222c42;
+    --button-fg: #131b2b;
+    --accent-soft-bg: rgba(138, 180, 248, 0.14);
+    --accent-soft-border: rgba(138, 180, 248, 0.35);
+    --accent-2-soft-bg: rgba(242, 166, 90, 0.12);
+    --accent-2-soft-border: rgba(242, 166, 90, 0.35);
+    --hero-glow-1: rgba(242, 166, 90, 0.14);
+    --hero-glow-2: rgba(138, 180, 248, 0.10);
+    --hero-photo-opacity: 0.85;
+    --hero-fog: rgba(19, 27, 43, 0.50);
+    --nav-fog: rgba(19, 27, 43, 0.92);
+    --page-glass: rgba(19, 27, 43, 0.58);
+    --page-glass-alt: rgba(24, 34, 54, 0.25);
+    --hero-nav: #e3e6ec;
+    --hero-nav-glow: 0 1px 6px rgba(0, 0, 0, 0.7);
+    --hero-text: var(--fg);
+    --hero-text-glow: none;
+    --lockup-bg: rgba(19, 27, 43, 0.42);
+    --lockup-border: rgba(255, 255, 255, 0.08);
+    --lockup-shadow: rgba(0, 0, 0, 0.30);
   }
 }
 
@@ -88,12 +127,107 @@ a:hover { text-decoration: underline; }
 
 /* Hero */
 .hero {
+  position: relative;
+  isolation: isolate;
   background:
     radial-gradient(1200px 600px at 80% -10%, var(--hero-glow-1), transparent 60%),
     radial-gradient(900px 500px at 10% 20%, var(--hero-glow-2), transparent 60%),
     var(--bg);
   border-bottom: 1px solid var(--border);
   padding-bottom: 80px;
+}
+
+/* Ocean Beach photo behind the main hero, faded into the
+   page by a mask, with a fog bank over the logo/text side so the thin logo
+   strokes stay legible. */
+.hero-photos {
+  /* Fixed to the viewport so the rest of the page scrolls over the photo. */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: max(720px, 58.75vw);
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(180deg, #000 85%, transparent 100%);
+          mask-image: linear-gradient(180deg, #000 85%, transparent 100%);
+}
+.hero:not(.compact) { border-bottom: 0; }
+.photo-credit {
+  position: absolute;
+  right: 16px;
+  bottom: 10px;
+  margin: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: var(--fg-muted);
+  opacity: 0.75;
+}
+/* Page content after the photo hero: frosted glass so the photo shows
+   through faintly as you scroll. */
+.hero:not(.compact) ~ main,
+.hero:not(.compact) ~ .footer {
+  position: relative;
+  z-index: 1;
+  background: var(--page-glass);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+}
+.hero:not(.compact) ~ main {
+  border-top: 1px solid var(--lockup-border);
+}
+.hero:not(.compact) ~ main .section.alt {
+  background: var(--page-glass-alt);
+}
+.hero-slides {
+  position: absolute;
+  inset: 0;
+  opacity: var(--hero-photo-opacity);
+}
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: 70% top;
+  filter: brightness(1.08);
+  background-repeat: no-repeat;
+}
+
+/* Fog: a soft bank over the left (where the logo sits) plus slow-drifting wisps. */
+.hero-fog,
+.hero-fog::before {
+  position: absolute;
+  inset: -10% -20%;
+}
+.hero-fog {
+  background:
+    linear-gradient(180deg, var(--nav-fog) 0, var(--nav-fog) 100px, transparent 150px),
+    radial-gradient(ellipse 55% 75% at 30% 45%, var(--hero-fog) 0%, var(--hero-fog) 35%, transparent 75%),
+    linear-gradient(90deg, var(--hero-fog) 0%, transparent 70%);
+}
+.hero-fog::before {
+  content: "";
+  background:
+    radial-gradient(ellipse 30% 14% at 25% 70%, var(--hero-fog), transparent 70%),
+    radial-gradient(ellipse 26% 12% at 70% 58%, var(--hero-fog), transparent 70%),
+    radial-gradient(ellipse 34% 16% at 55% 85%, var(--hero-fog), transparent 70%);
+  filter: blur(18px);
+  animation: hero-fog-drift 45s ease-in-out infinite alternate;
+}
+@keyframes hero-fog-drift {
+  from { transform: translateX(-6%); }
+  to   { transform: translateX(6%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-fog::before { animation: none; }
+}
+@media (max-width: 600px) {
+  /* Text spans the full width on phones, so fog the whole photo more evenly. */
+  .hero-fog {
+    background: linear-gradient(180deg, var(--hero-fog) 0%, var(--hero-fog) 70%, transparent 100%);
+  }
 }
 .hero.compact { padding-bottom: 24px; }
 
@@ -130,9 +264,47 @@ a:hover { text-decoration: underline; }
   margin: 0 0 22px;
   line-height: 1;
 }
+/* Frosted panel behind the logo on the photo hero. */
+.hero:not(.compact) .nav-links a:not(:hover) {
+  color: var(--hero-nav);
+  text-shadow: var(--hero-nav-glow);
+}
+.hero:not(.compact) .tagline,
+.hero:not(.compact) .meta {
+  color: var(--hero-text);
+  text-shadow: var(--hero-text-glow);
+}
+.hero:not(.compact) .tagline { font-size: 1.02rem; }
+.hero:not(.compact) .meta { font-size: 0.86rem; gap: 18px; }
+/* Quieter, glassy CTA on the photo hero (other .button uses stay solid). */
+.hero:not(.compact) .button {
+  background: var(--lockup-bg);
+  color: var(--accent);
+  border: 1px solid var(--accent-soft-border);
+  font-weight: 500;
+  font-size: 0.92rem;
+  padding: 8px 16px;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+.hero:not(.compact) .button:hover {
+  background: var(--accent-soft-bg);
+  border-color: var(--accent);
+}
+.hero:not(.compact) .hero-lockup {
+  max-width: calc(640px + 2 * 14px);
+  margin-bottom: 40px; /* beats the generic `.hero h1` margin */
+  padding: 6px 14px;
+  border-radius: 18px;
+  background: var(--lockup-bg);
+  border: 1px solid var(--lockup-border);
+  box-shadow: 0 10px 30px var(--lockup-shadow);
+  -webkit-backdrop-filter: blur(4px) saturate(1.1);
+          backdrop-filter: blur(4px) saturate(1.1);
+}
 .hero-lockup img {
   width: 100%;
-  max-width: 740px;
+  max-width: 640px;
   height: auto;
 }
 .brand-sub {
@@ -195,7 +367,7 @@ a:hover { text-decoration: underline; }
 .hero-inner {
   max-width: var(--max);
   margin: 0 auto;
-  padding: 60px 24px 0;
+  padding: 20px 24px 0;
 }
 @media (max-width: 600px) {
   .hero { padding-bottom: 48px; }
