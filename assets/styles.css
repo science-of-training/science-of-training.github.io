@@ -648,10 +648,12 @@ main { padding-bottom: 80px; }
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 16px;
-  text-align: center;
 }
-.speaker .bio-details .bio { text-align: left; }
-.speaker .avatar {
+.speaker, .organizer { text-align: center; }
+.speaker .bio-details .bio,
+.organizer .bio-details .bio { text-align: left; }
+.speaker .avatar,
+.organizer .avatar {
   display: block;
   width: 96px;
   height: 96px;
@@ -662,13 +664,21 @@ main { padding-bottom: 80px; }
   border: 1px solid var(--border);
   background: var(--bg);
 }
+.site-link {
+  display: inline-flex;
+  margin-top: 8px;
+  color: var(--accent);
+  opacity: 0.85;
+  transition: opacity 0.15s;
+}
+.site-link:hover, .site-link:focus-visible { opacity: 1; }
 .speaker .name { margin: 0; font-weight: 600; }
 .speaker .affil { margin: 4px 0 0; color: var(--fg-muted); font-size: 0.9rem; }
 
 /* Organizers */
 .organizers-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 16px;
   margin-top: 16px;
 }
@@ -676,7 +686,7 @@ main { padding-bottom: 80px; }
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 10px;
-  padding: 18px 20px;
+  padding: 16px;
 }
 .organizer .name { margin: 0; font-weight: 600; }
 .organizer .affil { margin: 4px 0 10px; color: var(--fg-muted); font-size: 0.9rem; }

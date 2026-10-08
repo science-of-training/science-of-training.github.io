@@ -7,7 +7,7 @@
   <meta name="description" content="An ICLR 2027 workshop asking which interpretability methods work for understanding training and what actions they enable — describing trajectories, forecasting outcomes, and repairing training." />
   <link rel="icon" type="image/svg+xml" href="assets/logos/favicon.svg" />
   <link rel="apple-touch-icon" href="assets/logos/avatar-dark-1024.png" />
-  <link rel="stylesheet" href="assets/styles.css?v=20261007" />
+  <link rel="stylesheet" href="assets/styles.css?v=20261007c" />
   <!-- Light mode disabled for now: theme is pinned to dark on <html>. To re-enable,
        restore the saved-theme script here and the #theme-toggle button. -->
 </head>
@@ -220,6 +220,7 @@
           <details class="bio-details">
             <summary>About</summary>
             <p class="bio">Professor at UCL, whose lab develops mathematical and experimental tools to understand how learning emerges in brains and artificial neural networks.</p>
+            <a class="site-link" href="https://www.saxelab.org/" target="_blank" rel="noopener" aria-label="Andrew Saxe’s website" title="Website"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
           </details>
         </div>
         <div class="speaker">
@@ -230,6 +231,7 @@
           <details class="bio-details">
             <summary>About</summary>
             <p class="bio">Assistant professor at Princeton, whose lab develops physics-inspired theory and tools for understanding learning and decision-making in biological and artificial systems.</p>
+            <a class="site-link" href="https://reddylab.physics.princeton.edu/" target="_blank" rel="noopener" aria-label="Gautam Reddy’s website" title="Website"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
           </details>
         </div>
         <div class="speaker">
@@ -240,6 +242,7 @@
           <details class="bio-details">
             <summary>About</summary>
             <p class="bio">Member of technical staff at Microsoft AI, who previously co-led the OLMo project on open language modeling. His current research focuses on large-scale pretraining of language models, with an emphasis on data curation, data mixing, benchmark validity, efficient experimentation, and generalization across model scales.</p>
+            <a class="site-link" href="https://kyleclo.com/" target="_blank" rel="noopener" aria-label="Kyle Lo’s website" title="Website"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
           </details>
         </div>
         <div class="speaker">
@@ -250,6 +253,7 @@
           <details class="bio-details">
             <summary>About</summary>
             <p class="bio">Member of technical staff at Thinking Machines Lab. His research focuses on continual learning with minimal and natural supervision.</p>
+            <a class="site-link" href="https://mars-tin.github.io/" target="_blank" rel="noopener" aria-label="Martin Ziqiao Ma’s website" title="Website"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
           </details>
         </div>
         <div class="speaker">
@@ -260,6 +264,7 @@
           <details class="bio-details">
             <summary>About</summary>
             <p class="bio">Staff research scientist at Google DeepMind. Her current research focuses on the future impacts of AI and the science of AI.</p>
+            <a class="site-link" href="https://scychan.github.io/" target="_blank" rel="noopener" aria-label="Stephanie Chan’s website" title="Website"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
           </details>
         </div>
       </div>
@@ -270,42 +275,51 @@
       <h2>Organizers</h2>
       <div class="organizers-grid">
         <div class="organizer">
+          <img class="avatar" src="assets/organizers/lee.jpg" alt="Isabelle Lee" loading="lazy">
           <p class="name">Isabelle Lee</p>
           <p class="affil">University of Southern California</p>
           <p class="interests">training, interpretability, reasoning</p>
           <details class="bio-details">
             <summary>Full bio</summary>
             <p class="bio">Isabelle Lee is a PhD student at the University of Southern California. Her work focuses on interpretability, training, and reasoning. Specifically, her research aims to (1) predict training and (2) predict failures. To this aim, she uses dynamical systems and physics-inspired approaches to analyze small-scale toy learning problems, as well as analyzing larger-scale training from developmental perspectives. She is a recipient of the Viterbi School of Engineering Graduate Fellowship and Coefficient Giving's Technical AI Safety Research Grant. Previously, she was a researcher at Carnegie Mellon University and Amazon Alexa, and her background is in Plasma Physics and Complex Systems.</p>
+            <a class="site-link" href="https://iglee.me/" target="_blank" rel="noopener" aria-label="Isabelle Lee’s website" title="Website"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
           </details>
         </div>
         <div class="organizer">
+          <img class="avatar" src="assets/organizers/liu.jpg" alt="Emmy Liu" loading="lazy">
           <p class="name">Emmy Liu</p>
           <p class="affil">Carnegie Mellon University, LTI</p>
           <p class="interests">pretraining, cognitive perspectives</p>
           <details class="bio-details">
             <summary>Full bio</summary>
             <p class="bio">Emmy Liu is a PhD Candidate at Carnegie Mellon University in the Language Technologies Institute. Her current work is on understanding pretraining from a cognitive perspective. She is a recipient of a Natural Sciences and Engineering Research Council of Canada Doctoral Scholarship, the SoftBank-ARM fellowship, an NEC fellowship as well as a CMU Presidential Fellowship. Her work has received the Best Resource Paper award at ACL 2023. She has co-organized the workshop on Figurative Language Processing at NAACL 2024, the overall Student Research Workshop at NAACL 2025, as well as the Computational Developmental Linguistics workshop at ACL 2026.</p>
+            <a class="site-link" href="https://nightingal3.github.io/" target="_blank" rel="noopener" aria-label="Emmy Liu’s website" title="Website"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
           </details>
         </div>
         <div class="organizer">
+          <img class="avatar" src="assets/organizers/sun.jpg" alt="Kaiser Sun" loading="lazy">
           <p class="name">Kaiser Sun</p>
           <p class="affil">Johns Hopkins University</p>
           <p class="interests">training dynamics, evaluation, interpretability</p>
           <details class="bio-details">
             <summary>Full bio</summary>
             <p class="bio">Kaiser Sun is a Ph.D. student in Computer Science at the Data Science and AI Institute and the Center for Language and Speech Processing at Johns Hopkins University. Their research focuses on the training dynamics, evaluation, and interpretability of Large Language Models. Generally, Kaiser is interested in understanding how language models function and exploring how we can change them. Their work has been recognized with an honorable mention at CoNLL 2023, an outstanding paper award at MLRC 2022, and coverage by a few media outlets such as MIT Technology Review and WIRED. Previously, they obtained their B.S. and M.S. from the University of Washington and were a researcher at Meta AI, Together AI, and AWS AI Labs.</p>
+            <a class="site-link" href="https://kaiserwholearns.github.io/" target="_blank" rel="noopener" aria-label="Kaiser Sun’s website" title="Website"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
           </details>
         </div>
         <div class="organizer">
+          <img class="avatar" src="assets/organizers/khashabi.jpg" alt="Daniel Khashabi" loading="lazy">
           <p class="name">Daniel Khashabi</p>
           <p class="affil">Johns Hopkins University</p>
           <p class="interests">reasoning, discovery</p>
           <details class="bio-details">
             <summary>Full bio</summary>
             <p class="bio">Daniel Khashabi is an Assistant Professor of Computer Science at Johns Hopkins University, affiliated with the Data Science and AI Institute and the Center for Language and Speech Processing (CLSP). He is interested in the intersection of reasoning and discovery. He is the recipient of the NSF CAREER award (2026), Ai2's Lasting Impact Award (2024), multiple industry faculty awards (Amazon, Google, Apple), and several Best Paper Awards (COLM 2024, ACL 2023, NAACL 2022). His teaching earned him the Joel Dean Award for Excellence in Teaching in the Department of Computer Science in 2025. Most relevant to this proposal, he has co-organized Towards Test-Time Continual Learning Agents at NeurIPS 2026, Interpreting Agent Behavior (IAB) at NeurIPS 2026, the Workshop on Instruction Tuning and Instruction Following at NeurIPS 2023, and the Student Research Workshop at ACL 2019.</p>
+            <a class="site-link" href="https://www.cs.jhu.edu/~danielk/" target="_blank" rel="noopener" aria-label="Daniel Khashabi’s website" title="Website"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
           </details>
         </div>
         <div class="organizer">
+          <img class="avatar" src="assets/organizers/biderman.jpg" alt="Stella Biderman" loading="lazy">
           <p class="name">Stella Biderman</p>
           <p class="affil">Executive Director, EleutherAI</p>
           <p class="interests">open LLMs, learning dynamics, interpretability, evaluation</p>
@@ -313,15 +327,18 @@
             <summary>Full bio</summary>
             <p class="bio">Stella Biderman is the Executive Director of EleutherAI, a non-profit research institute and open science community that does research on large language models, works to make research on large-scale AI technologies more widely accessible around the world, and works to grow and promote the open source AI community. She pioneered the development of open and transparent language models that make the type of research advocated for in this workshop possible, including the first state-of-the-open LLMs to be released alongside their training data and the Pythia model suite, which introduced the idea that releasing partially trained model checkpoints was scientifically valuable and set the standard for maximally open releases adopted by projects such as LLM360, OLMo, and Marin. Her lab has done influential research on learning dynamics and interpretability, including introducing Sparse Autoencoders as a tool for interpretability, introducing the problem of forecasting which specific sequences are memorized by a large language model during training, performing the first study of the stability of circuit analysis over the course of training, and demonstrating that it is possible to use data filtering to eliminate undesirable capabilities in large language models. Her recent position paper at ICML outlines the need for the type of work solicited in this workshop.</p>
             <p class="bio">Stella co-leads the EvalEval Coalition, a multi-stakeholder initiative bringing methodological rigor and accountability to AI evaluation, is on the advisory board to the Machine Learning Reproducibility Challenge, is organizing an Open-Weight Pre-training Safety Accelerator as part of the Seoul Alignment Workshop (co-located with ICML), and is an AC for NeurIPS. Previously, she was an organizer of the AI Village @ DEF CON (2018–2021), working group lead for the BigScience Research Workshop (2022), and organizer of Dataset Convening. Stella received her M.S. in Computer Science from Georgia Tech, her S.B. (honors) in Mathematics from the University of Chicago, and her A.B. in Philosophy from the University of Chicago. Her work regularly appears at NeurIPS, ICML, ICLR, and ACL.</p>
+            <a class="site-link" href="https://scholar.google.com/citations?user=bO7H0DAAAAAJ" target="_blank" rel="noopener" aria-label="Stella Biderman’s website" title="Website"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
           </details>
         </div>
         <div class="organizer">
+          <img class="avatar" src="assets/organizers/melis.jpg" alt="David Alvarez-Melis" loading="lazy">
           <p class="name">David Alvarez-Melis</p>
           <p class="affil">Harvard University · Kempner Institute · Microsoft Research</p>
           <p class="interests">data-centric ML, optimal transport</p>
           <details class="bio-details">
             <summary>Full bio</summary>
             <p class="bio">David Alvarez-Melis is an Assistant Professor of Computer Science at Harvard University, where he leads the Data-Centric Machine Learning (DCML) Lab. He is also Associate Faculty at the Kempner Institute and a Research Scientist at Microsoft Research. The Harvard DCML Lab develops principled methods for characterizing, transforming, and optimizing datasets, working toward a rigorous science of data for machine learning. He has organized or co-organized several workshops at the intersection of machine learning and applied mathematics, including the Optimal Transport and Machine Learning Workshop at NeurIPS 2023, the Optimal Transport Workshop at the Institut d'Études Scientifiques de Cargèse (2024), and the LatinX in AI Workshop at ICML (2023 and 2024). David received his PhD in Computer Science from MIT, his MS in Mathematics from NYU's Courant Institute, and his BSc in Mathematics from ITAM in Mexico City. His work appears regularly at NeurIPS, ICML, ICLR, AISTATS, and UAI.</p>
+            <a class="site-link" href="https://dmelis.github.io/" target="_blank" rel="noopener" aria-label="David Alvarez-Melis’s website" title="Website"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
           </details>
         </div>
       </div>
